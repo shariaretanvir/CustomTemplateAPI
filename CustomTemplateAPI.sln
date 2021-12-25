@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomTemplateAPI", "CustomTemplateAPI\CustomTemplateAPI.csproj", "{E3042ACE-384F-4C16-97A1-0B5B97AA7B20}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccessApp", "DataAccessApp\DataAccessApp.csproj", "{C0F2301A-F622-4F0A-9DEF-06A5D86DEAD5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E3042ACE-384F-4C16-97A1-0B5B97AA7B20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E3042ACE-384F-4C16-97A1-0B5B97AA7B20}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E3042ACE-384F-4C16-97A1-0B5B97AA7B20}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E3042ACE-384F-4C16-97A1-0B5B97AA7B20}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0F2301A-F622-4F0A-9DEF-06A5D86DEAD5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0F2301A-F622-4F0A-9DEF-06A5D86DEAD5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0F2301A-F622-4F0A-9DEF-06A5D86DEAD5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0F2301A-F622-4F0A-9DEF-06A5D86DEAD5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {08D7F5A8-CE19-4006-B24A-0E7D3097F587}
+	EndGlobalSection
+EndGlobal
