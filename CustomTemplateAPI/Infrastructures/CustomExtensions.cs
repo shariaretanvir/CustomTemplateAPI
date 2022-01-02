@@ -1,4 +1,7 @@
-﻿using CustomTemplateAPI.Filters;
+﻿using CustomTemplateAPI.RepositoryLayer.Classes;
+using CustomTemplateAPI.RepositoryLayer.Interfaces;
+using CustomTemplateAPI.Filters;
+using CustomTemplateAPI.UnitOfWork;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace CustomTemplateAPI.Infrastructures
@@ -9,6 +12,7 @@ namespace CustomTemplateAPI.Infrastructures
         {
             services.AddScoped<RequestResponseLoggingFilterAttribute>();
             services.AddScoped<CustomValidationFilterAttribute>();
+            services.AddScoped<IUnitOfWork, UnitOfWork.UnitOfWork>();
             return services;
         }
     }

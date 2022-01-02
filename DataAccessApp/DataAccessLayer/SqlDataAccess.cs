@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DataAccessApp.DataAccessLayer
 {
-    internal class SqlDataAccess : ISqlDataAccess
+    public class SqlDataAccess : ISqlDataAccess
     {
         public IDbConnection Connection { get; }
         public IDbTransaction Transaction { get; }
@@ -30,9 +30,16 @@ namespace DataAccessApp.DataAccessLayer
             }
         }
 
-        public int ExecuteWithReturnValue(string sql, DynamicParameters parameters)
+        public async Task<int> ExecuteWithReturnValue(string sql, DynamicParameters parameters)
         {
-            throw new NotImplementedException();
+            try
+            {
+                return await Connection.ExecuteAsync(sql, parameters, commandType: CommandType.StoredProcedure);
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
         }
 
         public async Task<T> Get<T>(string sql, T model)

@@ -11,7 +11,7 @@ namespace CustomTemplateAPI.Filters
         public ILogger<CustomValidationFilterAttribute> logger { get; }
         public CustomValidationFilterAttribute(ILogger<CustomValidationFilterAttribute> logger)
         {
-            logger = logger;
+            this.logger = logger;
         }
 
         public async Task OnActionExecutionAsync(ActionExecutingContext context, ActionExecutionDelegate next)

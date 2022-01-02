@@ -1,6 +1,6 @@
 ﻿using CustomTemplateAPI.Models;
 
-namespace CustomTemplateAPI.BusinessLayer.Interfaces
+namespace CustomTemplateAPI.RepositoryLayer.Interfaces
 {
     public interface IAddressRepository: IGenericRepository<Address>
     {

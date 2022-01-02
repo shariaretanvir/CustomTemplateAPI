@@ -15,7 +15,10 @@
 
   <ItemGroup>
     <Folder Include="LogFiles\" />
-    <Folder Include="UnitOfWork\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DataAccessApp\DataAccessApp.csproj" />
   </ItemGroup>
 
 </Project>

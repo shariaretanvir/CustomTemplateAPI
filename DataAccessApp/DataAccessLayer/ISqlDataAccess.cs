@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace DataAccessApp.DataAccessLayer
 {
-    internal interface ISqlDataAccess
+    public interface ISqlDataAccess
     {
         Task<int> Execute<T>(string sql,T model);
         Task<IEnumerable<T>> GetAll<T>(string sql, T model);
         Task<T> Get<T>(string sql, T model);
-        int ExecuteWithReturnValue(string sql, DynamicParameters parameters);
+        Task<int> ExecuteWithReturnValue(string sql, DynamicParameters parameters);
     }
 }

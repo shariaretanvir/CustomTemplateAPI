@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace CustomTemplateAPI.BusinessLayer.Interfaces
+namespace CustomTemplateAPI.RepositoryLayer.Interfaces
 {
     public interface IGenericRepository<T> where T : class
     {
         Task<T> GetAsync(int id);
-        Task<IEnumerable<T>> GetAllAsync();
+        Task<List<T>> GetAllAsync();
         Task<int> SaveAsync(T model);
         Task<int> UpdateAsync(T model);
         Task<int> DeleteAsync(int id);

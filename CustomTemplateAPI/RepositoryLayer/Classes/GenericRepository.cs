@@ -1,33 +1,32 @@
-﻿using CustomTemplateAPI.BusinessLayer.Interfaces;
-using CustomTemplateAPI.Models;
+﻿using CustomTemplateAPI.RepositoryLayer.Interfaces;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace CustomTemplateAPI.BusinessLayer.Classes
+namespace CustomTemplateAPI.RepositoryLayer.Classes
 {
-    public class StudentRepository : IStudentRepository
+    public class GenericRepository<T> : IGenericRepository<T> where T : class
     {
         public Task<int> DeleteAsync(int id)
         {
             throw new System.NotImplementedException();
         }
 
-        public Task<IEnumerable<Student>> GetAllAsync()
+        public Task<List<T>> GetAllAsync()
         {
             throw new System.NotImplementedException();
         }
 
-        public Task<Student> GetAsync(int id)
+        public Task<T> GetAsync(int id)
         {
             throw new System.NotImplementedException();
         }
 
-        public Task<int> SaveAsync(Student model)
+        public Task<int> SaveAsync(T model)
         {
             throw new System.NotImplementedException();
         }
 
-        public Task<int> UpdateAsync(Student model)
+        public Task<int> UpdateAsync(T model)
         {
             throw new System.NotImplementedException();
         }
