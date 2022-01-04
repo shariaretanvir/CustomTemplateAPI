@@ -15,8 +15,8 @@ namespace CustomTemplateAPI.RepositoryLayer.Classes
         private readonly ISqlDataAccess sqlDataAccess;
         public StudentRepository(IDbConnection connection, IDbTransaction transaction) : base(connection, transaction)
         {
-            Connection = new SqlConnection("Server = DESKTOP-AKASH\\SQLEXPRESS; Database =TestDB;Trusted_Connection=True;");
-            Connection.Open();
+            //Connection = new SqlConnection("Server = DESKTOP-AKASH\\SQLEXPRESS; Database =TestDB;Trusted_Connection=True;");
+            //Connection.Open();
             sqlDataAccess = new SqlDataAccess(Connection, Transaction);
         }
 
@@ -25,10 +25,7 @@ namespace CustomTemplateAPI.RepositoryLayer.Classes
             try
             {
                 dynamic students = await sqlDataAccess.GetAll("GetAllStudents", new object { });
-                foreach (dynamic item in students)
-                {
-                    int stdid = item.StudentID;
-                }
+                
                 return students;
             }
             catch (Exception e)

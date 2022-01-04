@@ -13,6 +13,7 @@ namespace CustomTemplateAPI.Infrastructures
             services.AddScoped<RequestResponseLoggingFilterAttribute>();
             services.AddScoped<CustomValidationFilterAttribute>();
             services.AddScoped<IUnitOfWork, UnitOfWork.UnitOfWork>();
+            services.AddScoped<IServiceUnitOfWork, ServiceUnitOfWork>();
             return services;
         }
     }

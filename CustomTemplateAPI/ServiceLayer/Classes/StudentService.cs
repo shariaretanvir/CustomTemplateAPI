@@ -24,9 +24,17 @@ namespace CustomTemplateAPI.ServiceLayer.Classes
             return UnitOfWork.StudentRepository.GetAllStudents();
         }
 
-        public Task<int> SaveStudent(Student student)
+        public async Task<int> SaveStudent(Student student)
         {
-            throw new System.NotImplementedException();
+            try
+            {
+                int stdid = await UnitOfWork.StudentRepository.SaveStudent(student);
+                return 1;
+            }
+            catch (System.Exception e)
+            {
+                throw new System.Exception(e.Message);
+            }
         }
     }
 }

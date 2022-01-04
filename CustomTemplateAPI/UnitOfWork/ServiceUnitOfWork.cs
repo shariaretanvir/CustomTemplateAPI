@@ -7,15 +7,14 @@ namespace CustomTemplateAPI.UnitOfWork
     public class ServiceUnitOfWork : IServiceUnitOfWork
     {
         public ILogger<ServiceUnitOfWork> logger { get; }
-        public ServiceUnitOfWork(ILogger<ServiceUnitOfWork> logger)
+        public IUnitOfWork UnitOfWork { get; }
+        public ServiceUnitOfWork(ILogger<ServiceUnitOfWork> logger, IUnitOfWork unitOfWork)
         {
             this.logger = logger;
-        }
-        public UnitOfWork UnitOfWork { get; }
-        public ServiceUnitOfWork(UnitOfWork unitOfWork)
-        {
             UnitOfWork = unitOfWork;
         }
+        
+        
         private IStudentService studentService;
         public IStudentService StudentService
         {

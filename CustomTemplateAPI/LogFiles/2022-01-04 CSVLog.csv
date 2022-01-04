@@ -1,0 +1,11 @@
+time,level,message,callsite,User
+2022-01-04 01:08:41.7255,Info,Applicatino Starting,CustomTemplateAPI.Program.Main,
+2022-01-04 01:12:58.2415,Error,Unable to resolve service for type 'CustomTemplateAPI.UnitOfWork.IServiceUnitOfWork' while attempting to activate 'CustomTemplateAPI.Controllers.StudentsController'.,CustomTemplateAPI.Middlewares.GlobalExceptionMiddleware.InvokeAsync,
+2022-01-04 01:14:13.9265,Info,Applicatino Starting,CustomTemplateAPI.Program.Main,
+2022-01-04 01:22:45.3831,Info,Applicatino Starting,CustomTemplateAPI.Program.Main,
+2022-01-04 01:30:47.8334,Info,Applicatino Starting,CustomTemplateAPI.Program.Main,
+2022-01-04 01:32:53.8341,Info,Applicatino Starting,CustomTemplateAPI.Program.Main,
+2022-01-04 01:32:55.5710,Error,"Some services are not able to be constructed (Error while validating the service descriptor 'ServiceType: CustomTemplateAPI.UnitOfWork.IServiceUnitOfWork Lifetime: Scoped ImplementationType: CustomTemplateAPI.UnitOfWork.ServiceUnitOfWork': Unable to activate type 'CustomTemplateAPI.UnitOfWork.ServiceUnitOfWork'. The following constructors are ambiguous:
+Void .ctor(Microsoft.Extensions.Logging.ILogger`1[CustomTemplateAPI.UnitOfWork.ServiceUnitOfWork])
+Void .ctor(CustomTemplateAPI.UnitOfWork.IUnitOfWork))",CustomTemplateAPI.Program.Main,
+2022-01-04 01:34:14.5459,Info,Applicatino Starting,CustomTemplateAPI.Program.Main,

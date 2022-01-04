@@ -68,3 +68,45 @@
 2021-12-30 02:00:03.8621 Info Adding target DatabaseTarget(Name=logfileDB)
 2021-12-30 02:00:03.8820 Info Adding target ColoredConsoleTarget(Name=consoleTarget)
 2021-12-30 02:00:04.0120 Info Validating config: TargetNames=consoleTarget, fileTarget, logfileCSV, logfileDB, ConfigItems=88, FilePath=E:\2021\dot net 5\TemplateAPI\CustomTemplateAPI\CustomTemplateAPI/Config/nlog.config
+2022-01-04 01:08:39.1815 Info Message Template Auto Format enabled
+2022-01-04 01:08:39.4781 Info Loading assembly: NLog.Web.AspNetCore
+2022-01-04 01:08:39.7405 Info Adding target FileTarget(Name=fileTarget)
+2022-01-04 01:08:39.9252 Info Adding target FileTarget(Name=logfileCSV)
+2022-01-04 01:08:39.9252 Info Adding target DatabaseTarget(Name=logfileDB)
+2022-01-04 01:08:39.9488 Info Adding target ColoredConsoleTarget(Name=consoleTarget)
+2022-01-04 01:08:40.2500 Info Validating config: TargetNames=consoleTarget, fileTarget, logfileCSV, logfileDB, ConfigItems=88, FilePath=E:\2021\dot net 5\TemplateAPI\CustomTemplateAPI\CustomTemplateAPI/Config/nlog.config
+2022-01-04 01:14:12.3166 Info Message Template Auto Format enabled
+2022-01-04 01:14:12.4248 Info Loading assembly: NLog.Web.AspNetCore
+2022-01-04 01:14:12.5431 Info Adding target FileTarget(Name=fileTarget)
+2022-01-04 01:14:12.5819 Info Adding target FileTarget(Name=logfileCSV)
+2022-01-04 01:14:12.5819 Info Adding target DatabaseTarget(Name=logfileDB)
+2022-01-04 01:14:12.6016 Info Adding target ColoredConsoleTarget(Name=consoleTarget)
+2022-01-04 01:14:12.7219 Info Validating config: TargetNames=consoleTarget, fileTarget, logfileCSV, logfileDB, ConfigItems=88, FilePath=E:\2021\dot net 5\TemplateAPI\CustomTemplateAPI\CustomTemplateAPI/Config/nlog.config
+2022-01-04 01:22:44.8892 Info Message Template Auto Format enabled
+2022-01-04 01:22:44.9155 Info Loading assembly: NLog.Web.AspNetCore
+2022-01-04 01:22:45.0418 Info Adding target FileTarget(Name=fileTarget)
+2022-01-04 01:22:45.0853 Info Adding target FileTarget(Name=logfileCSV)
+2022-01-04 01:22:45.0853 Info Adding target DatabaseTarget(Name=logfileDB)
+2022-01-04 01:22:45.1088 Info Adding target ColoredConsoleTarget(Name=consoleTarget)
+2022-01-04 01:22:45.2122 Info Validating config: TargetNames=consoleTarget, fileTarget, logfileCSV, logfileDB, ConfigItems=88, FilePath=E:\2021\dot net 5\TemplateAPI\CustomTemplateAPI\CustomTemplateAPI/Config/nlog.config
+2022-01-04 01:30:46.5542 Info Message Template Auto Format enabled
+2022-01-04 01:30:46.7760 Info Loading assembly: NLog.Web.AspNetCore
+2022-01-04 01:30:47.0242 Info Adding target FileTarget(Name=fileTarget)
+2022-01-04 01:30:47.0828 Info Adding target FileTarget(Name=logfileCSV)
+2022-01-04 01:30:47.1141 Info Adding target DatabaseTarget(Name=logfileDB)
+2022-01-04 01:30:47.1419 Info Adding target ColoredConsoleTarget(Name=consoleTarget)
+2022-01-04 01:30:47.3072 Info Validating config: TargetNames=consoleTarget, fileTarget, logfileCSV, logfileDB, ConfigItems=88, FilePath=E:\2021\dot net 5\TemplateAPI\CustomTemplateAPI\CustomTemplateAPI/Config/nlog.config
+2022-01-04 01:32:52.7591 Info Message Template Auto Format enabled
+2022-01-04 01:32:52.7937 Info Loading assembly: NLog.Web.AspNetCore
+2022-01-04 01:32:53.0285 Info Adding target FileTarget(Name=fileTarget)
+2022-01-04 01:32:53.0506 Info Adding target FileTarget(Name=logfileCSV)
+2022-01-04 01:32:53.0506 Info Adding target DatabaseTarget(Name=logfileDB)
+2022-01-04 01:32:53.0971 Info Adding target ColoredConsoleTarget(Name=consoleTarget)
+2022-01-04 01:32:53.4811 Info Validating config: TargetNames=consoleTarget, fileTarget, logfileCSV, logfileDB, ConfigItems=88, FilePath=E:\2021\dot net 5\TemplateAPI\CustomTemplateAPI\CustomTemplateAPI/Config/nlog.config
+2022-01-04 01:34:13.9288 Info Message Template Auto Format enabled
+2022-01-04 01:34:13.9598 Info Loading assembly: NLog.Web.AspNetCore
+2022-01-04 01:34:14.0807 Info Adding target FileTarget(Name=fileTarget)
+2022-01-04 01:34:14.1166 Info Adding target FileTarget(Name=logfileCSV)
+2022-01-04 01:34:14.1166 Info Adding target DatabaseTarget(Name=logfileDB)
+2022-01-04 01:34:14.1451 Info Adding target ColoredConsoleTarget(Name=consoleTarget)
+2022-01-04 01:34:14.2671 Info Validating config: TargetNames=consoleTarget, fileTarget, logfileCSV, logfileDB, ConfigItems=88, FilePath=E:\2021\dot net 5\TemplateAPI\CustomTemplateAPI\CustomTemplateAPI/Config/nlog.config
