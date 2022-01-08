@@ -9,19 +9,43 @@ namespace CustomTemplateAPI.UnitOfWork
 {
     public class UnitOfWork : IUnitOfWork
     {
-        private  IDbConnection connection;
-        private  IDbTransaction transaction;
+        private IDbConnection connection;
+        private IDbTransaction transaction;
         private IStudentRepository _studentRepository;
+        private IAddressRepository _addressRepository;
         private bool disposedValue;
 
         public UnitOfWork()
         {
-            connection = new SqlConnection(Common.AppSettings.GetSection("ConnectionStrings:MyConstring").ToString());
-            connection.Open();
-        }
-        public IStudentRepository StudentRepository =>
-            _studentRepository??(_studentRepository= new StudentRepository(connection,transaction));
 
+        }
+        public IStudentRepository StudentRepository
+        {
+            get
+            {
+                OpenConnection();
+                return _studentRepository ?? (_studentRepository = new StudentRepository(connection, transaction));
+            }
+        }
+
+        public IAddressRepository AddressRepository
+        {
+            get
+            {
+                OpenConnection();
+                return _addressRepository ?? (_addressRepository = new AddressRepository(connection, transaction));
+            }
+        }
+
+
+        private void OpenConnection()
+        {
+            if (connection == null)
+            {
+                connection = new SqlConnection(Common.AppSettings["ConnectionStrings:MyConstring"].ToString());
+                connection.Open();
+            }
+        }
         public void Commit()
         {
             try
@@ -43,16 +67,19 @@ namespace CustomTemplateAPI.UnitOfWork
         private void resetRepository()
         {
             _studentRepository = null;
+            _addressRepository = null;
         }
 
         public void InitTransaction()
         {
+            OpenConnection();
             transaction = connection.BeginTransaction();
         }
 
         public void Rollback()
         {
             transaction.Rollback();
+            resetRepository();
         }
 
         protected virtual void Dispose(bool disposing)
@@ -62,12 +89,12 @@ namespace CustomTemplateAPI.UnitOfWork
                 if (disposing)
                 {
                     // TODO: dispose managed state (managed objects)
-                    if(transaction != null)
+                    if (transaction != null)
                     {
                         transaction.Dispose();
                         transaction = null;
                     }
-                    if(connection != null)
+                    if (connection != null)
                     {
                         connection.Dispose();
                         connection = null;

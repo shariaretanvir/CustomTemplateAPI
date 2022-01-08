@@ -24,7 +24,7 @@ namespace CustomTemplateAPI.RepositoryLayer.Classes
         {
             try
             {
-                dynamic students = await sqlDataAccess.GetAll("GetAllStudents", new object { });
+                dynamic students = await sqlDataAccess.GetAll("LstStudents", new object { });
                 
                 return students;
             }

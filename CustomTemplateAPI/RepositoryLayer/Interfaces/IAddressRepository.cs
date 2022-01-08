@@ -4,5 +4,6 @@ namespace CustomTemplateAPI.RepositoryLayer.Interfaces
 {
     public interface IAddressRepository: IGenericRepository<Address>
     {
+
     }
 }

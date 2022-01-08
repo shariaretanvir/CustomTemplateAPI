@@ -10,5 +10,6 @@ namespace CustomTemplateAPI.UnitOfWork
         void InitTransaction();
 
         IStudentRepository StudentRepository { get; }
+        IAddressRepository AddressRepository { get; }
     }
 }

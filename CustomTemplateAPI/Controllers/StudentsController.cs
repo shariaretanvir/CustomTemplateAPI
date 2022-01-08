@@ -26,7 +26,14 @@ namespace CustomTemplateAPI.Controllers
         {
             try
             {
-                return Ok(await ServiceUnitOfWork.StudentService.SaveStudent(student));
+                if(await ServiceUnitOfWork.StudentService.SaveStudent(student) == 1)
+                {
+                    return Ok("Save Successfully");
+                }
+                else
+                {
+                    return Ok("SOmething went wrong");
+                }
             }
             catch (Exception e)
             {

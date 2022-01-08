@@ -34,7 +34,7 @@ namespace DataAccessApp.DataAccessLayer
         {
             try
             {
-                return await Connection.ExecuteAsync(sql, parameters, commandType: CommandType.StoredProcedure);
+                return await Connection.ExecuteAsync(sql, parameters, commandType: CommandType.StoredProcedure,transaction:Transaction);
             }
             catch (Exception e)
             {
