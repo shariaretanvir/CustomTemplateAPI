@@ -23,7 +23,7 @@ namespace CustomTemplateAPI.UnitOfWork
         {
             get
             {
-                OpenConnection();
+                OpenConnection("Studentconstring");
                 return _studentRepository ?? (_studentRepository = new StudentRepository(connection, transaction));
             }
         }
@@ -32,13 +32,13 @@ namespace CustomTemplateAPI.UnitOfWork
         {
             get
             {
-                OpenConnection();
+                OpenConnection("Addressconstring");
                 return _addressRepository ?? (_addressRepository = new AddressRepository(connection, transaction));
             }
         }
 
 
-        private void OpenConnection()
+        private void OpenConnection(string constring="")
         {
             if (connection == null)
             {
