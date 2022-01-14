@@ -1,7 +1,0 @@
-time,level,message,callsite,User
-2021-12-30 00:32:33.7568,Info,Applicatino Starting,CustomTemplateAPI.Program.Main,
-2021-12-30 01:36:29.2315,Info,Applicatino Starting,CustomTemplateAPI.Program.Main,
-2021-12-30 01:38:43.9292,Info,Applicatino Starting,CustomTemplateAPI.Program.Main,
-2021-12-30 01:51:19.3308,Info,Applicatino Starting,CustomTemplateAPI.Program.Main,
-2021-12-30 01:57:55.4672,Info,Applicatino Starting,CustomTemplateAPI.Program.Main,
-2021-12-30 02:00:04.4270,Info,Applicatino Starting,CustomTemplateAPI.Program.Main,

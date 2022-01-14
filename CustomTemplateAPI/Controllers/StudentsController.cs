@@ -4,6 +4,9 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace CustomTemplateAPI.Controllers
@@ -13,9 +16,9 @@ namespace CustomTemplateAPI.Controllers
     public class StudentsController : ControllerBase
     {
         public ILogger<StudentsController> Logger { get; }
-        public IServiceUnitOfWork ServiceUnitOfWork { get; }
+        public IEnumerable<IServiceUnitOfWork> ServiceUnitOfWork { get; }
 
-        public StudentsController(ILogger<StudentsController> logger,IServiceUnitOfWork serviceUnitOfWork)
+        public StudentsController(ILogger<StudentsController> logger, IEnumerable<IServiceUnitOfWork> serviceUnitOfWork)
         {
             Logger = logger;
             ServiceUnitOfWork = serviceUnitOfWork;
@@ -26,7 +29,11 @@ namespace CustomTemplateAPI.Controllers
         {
             try
             {
-                if(await ServiceUnitOfWork.StudentService.SaveStudent(student) == 1)
+                var stdrepo = ServiceUnitOfWork.SingleOrDefault(t => t.GetType() == typeof(ServiceUnitOfWork));
+                //var repo1 = ServiceUnitOfWork.SingleOrDefault(t => t.GetType() == typeof(ServiceUnitofWork1));
+                //var a = stdrepo.StudentService.GetAllStudents();
+                //var b = repo1.StudentService.GetAllStudents();
+                if (await stdrepo.StudentService.SaveStudent(student) == 1)
                 {
                     return Ok("Save Successfully");
                 }
@@ -46,7 +53,8 @@ namespace CustomTemplateAPI.Controllers
         {
             try
             {
-                return Ok(await ServiceUnitOfWork.StudentService.GetAllStudents());
+                var stdservice = ServiceUnitOfWork.SingleOrDefault(t => t.GetType() == typeof(ServiceUnitOfWork));
+                return Ok(await stdservice.StudentService.GetAllStudents());
             }
             catch (Exception e)
             {

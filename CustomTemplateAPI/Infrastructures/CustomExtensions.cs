@@ -14,6 +14,7 @@ namespace CustomTemplateAPI.Infrastructures
             services.AddScoped<CustomValidationFilterAttribute>();
             services.AddScoped<IUnitOfWork, UnitOfWork.UnitOfWork>();
             services.AddScoped<IServiceUnitOfWork, ServiceUnitOfWork>();
+            services.AddScoped<IServiceUnitOfWork, ServiceUnitofWork1>();
             return services;
         }
     }

@@ -649,3 +649,25 @@ Error Number:208,State:1,Class:16
    at NLog.Targets.DatabaseTarget.WriteLogEventToDatabase(LogEventInfo logEvent, String connectionString)
 ClientConnectionId:624a1e32-58e8-438b-ae08-ae636e096ef1
 Error Number:208,State:1,Class:16
+2022-01-14 18:01:52.5187 Info Message Template Auto Format enabled
+2022-01-14 18:01:52.7153 Info Loading assembly: NLog.Web.AspNetCore
+2022-01-14 18:01:53.1345 Info Adding target FileTarget(Name=fileTarget)
+2022-01-14 18:01:53.2232 Info Adding target FileTarget(Name=logfileCSV)
+2022-01-14 18:01:53.2432 Info Adding target DatabaseTarget(Name=logfileDB)
+2022-01-14 18:01:53.3040 Info Adding target ColoredConsoleTarget(Name=consoleTarget)
+2022-01-14 18:01:53.5625 Info Validating config: TargetNames=consoleTarget, fileTarget, logfileCSV, logfileDB, ConfigItems=88, FilePath=D:\Akash Development\2021\dot net 5\TemplateAPI\CustomTemplateAPI\CustomTemplateAPI/Config/nlog.config
+2022-01-14 18:01:54.2481 Info FileTarget(Name=logfileCSV): Deleting old archive file: 'D:\Akash Development\2021\dot net 5\TemplateAPI\CustomTemplateAPI\CustomTemplateAPI\LogFiles\2021-12-30 CSVLog.csv'.
+2022-01-14 18:01:55.7143 Error DatabaseTarget(Name=logfileDB): Error when writing to database. Exception: System.Data.SqlClient.SqlException (0x80131904): Invalid object name 'dbo.LogTable'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at NLog.Targets.DatabaseTarget.ExecuteDbCommandWithParameters(LogEventInfo logEvent, IDbConnection dbConnection, IDbTransaction dbTransaction)
+   at NLog.Targets.DatabaseTarget.WriteLogEventToDatabase(LogEventInfo logEvent, String connectionString)
+ClientConnectionId:6312de58-5298-4b14-931d-83c0ace8315a
+Error Number:208,State:1,Class:16
