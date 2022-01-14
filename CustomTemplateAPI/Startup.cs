@@ -30,6 +30,7 @@ namespace CustomTemplateAPI
         public void ConfigureServices(IServiceCollection services)
         {
             services.ApiRateLimit();
+            services.CustomCORS();
             services.CustomInfraStructure();
             services.Configure<ApiBehaviorOptions>(c =>
             {
@@ -63,7 +64,7 @@ namespace CustomTemplateAPI
             app.UseHttpsRedirection();
 
             app.UseRouting();
-
+            app.UseCors();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
